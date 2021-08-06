@@ -1,3 +1,11 @@
+# Alex Inventory Project Tutorial
+
+This is a tutorial I completed following Tech with Time to make a quick Inventory System to practice using the 
+React Javascript Library. I hope to move on to another intermediate course following this.
+
+If you know any other tutorials please let me know, my contact info is on my Github Page.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
