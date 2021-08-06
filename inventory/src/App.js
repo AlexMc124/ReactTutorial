@@ -5,17 +5,30 @@ import AddItem from "./AddItem";
 import { useState } from "react";
 import ItemsDisplay from "./ItemsDisplay";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Test from "./Class";
 
 function App() {
   const [filters, setFilters] = useState({});
   const [data, setData] = useState({ items: [] });
+  const [showTest, setShowTest] = useState(true);
 
   const addItemToData = (item) => {
     let items = data["items"];
-    item.id = items.length;
-    items.push(item);
-    setData({ items: items });
-    console.log(data);
+
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(item),
+    };
+
+    fetch("http://localhost:3000/items", requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        items.push(data);
+        setData({ items: items });
+      });
   };
 
   const updateFilters = (searchParams) => {
@@ -59,6 +72,7 @@ function App() {
       <div className="row mt-3">
         <AddItem addItem={addItemToData} />
       </div>
+      {showTest ? <Test destroy={setShowTest} /> : null}
     </div>
   );
 }
