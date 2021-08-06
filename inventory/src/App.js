@@ -2,15 +2,20 @@ import React from "react";
 import "./App.css";
 import SearchBar from "./searchbar";
 import AddItem from "./AddItem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ItemsDisplay from "./ItemsDisplay";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Test from "./Class";
+/* import Test from "./Class"; */
 
 function App() {
   const [filters, setFilters] = useState({});
   const [data, setData] = useState({ items: [] });
-  const [showTest, setShowTest] = useState(true);
+  /* const [showTest, setShowTest] = useState(true); */
+  useEffect(() => {
+    fetch("http://localhost:3000/items")
+      .then((response) => response.json())
+      .then((data) => setData({ items: data }));
+  }, []);
 
   const addItemToData = (item) => {
     let items = data["items"];
@@ -72,7 +77,9 @@ function App() {
       <div className="row mt-3">
         <AddItem addItem={addItemToData} />
       </div>
-      {showTest ? <Test destroy={setShowTest} /> : null}
+      {/* 
+      {showTest ? <Test destroy={setShowTest} /> : null} 
+      */}
     </div>
   );
 }

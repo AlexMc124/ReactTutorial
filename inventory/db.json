@@ -15,25 +15,18 @@
       "id": 2
     },
     {
-      "name": "",
-      "price": 0,
-      "type": "",
-      "brand": "",
-      "id": 3
+      "name": "Banana",
+      "price": ".99",
+      "type": "Big",
+      "brand": "Dole",
+      "id": 6
     },
     {
-      "name": "",
-      "price": 0,
-      "type": "",
-      "brand": "",
-      "id": 4
-    },
-    {
-      "name": "",
-      "price": 0,
-      "type": "",
-      "brand": "",
-      "id": 5
+      "name": "Orange",
+      "price": ".5",
+      "type": "small",
+      "brand": "tesco",
+      "id": 7
     }
   ]
 }
