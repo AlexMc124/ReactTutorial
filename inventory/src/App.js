@@ -17,6 +17,22 @@ function App() {
       .then((data) => setData({ items: data }));
   }, []);
 
+  const deleteItem = (item) => {
+    const items = data["items"];
+    const requestOptions = {
+      method: "DELETE",
+    };
+    fetch(`http://localhost:3000/items/${item.id}`, requestOptions).then(
+      (response) => {
+        if (response.ok) {
+          const idx = items.indexOf(item);
+          items.splice(idx, 1);
+          setData({ items: items });
+        }
+      }
+    );
+  };
+
   const addItemToData = (item) => {
     let items = data["items"];
 
@@ -69,7 +85,10 @@ function App() {
   return (
     <div className="container">
       <div className="row mt-3">
-        <ItemsDisplay items={filterData(data["items"])} />
+        <ItemsDisplay
+          deleteItem={deleteItem}
+          items={filterData(data["items"])}
+        />
       </div>
       <div className="row mt-3">
         <SearchBar updateSearchParams={updateFilters} />

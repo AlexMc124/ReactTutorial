@@ -1,32 +1,46 @@
 {
   "items": [
     {
-      "name": "Alex",
-      "price": "3.99",
-      "type": "Test",
-      "brand": "Test",
+      "name": "Apples",
+      "price": "1.00",
+      "type": "Red",
+      "brand": "Dole",
       "id": 1
     },
     {
-      "name": "Alex",
-      "price": "2.99",
-      "type": "test",
-      "brand": "test",
+      "name": "Apples",
+      "price": "1.00",
+      "type": "Green",
+      "brand": "Dole",
       "id": 2
     },
     {
-      "name": "Banana",
-      "price": ".99",
+      "name": "Apples",
+      "price": "0.60",
+      "type": "Green",
+      "brand": "Tesco",
+      "id": 3
+    },
+    {
+      "name": "Bananas",
+      "price": "1.00",
+      "type": "Small",
+      "brand": "Dole",
+      "id": 4
+    },
+    {
+      "name": "Oranges",
+      "price": "0.55",
+      "type": "Big",
+      "brand": "Tesco",
+      "id": 5
+    },
+    {
+      "name": "Oranges",
+      "price": "0.80",
       "type": "Big",
       "brand": "Dole",
       "id": 6
-    },
-    {
-      "name": "Orange",
-      "price": ".5",
-      "type": "small",
-      "brand": "tesco",
-      "id": 7
     }
   ]
 }
